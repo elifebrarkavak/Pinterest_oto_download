@@ -7,8 +7,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-
-def download_specific_board(board_url, target_count=69):
+#burda target count değiştir
+def download_specific_board(board_url, target_count=72):
     desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
     folder_name = os.path.join(desktop_path, "13")
 
@@ -88,7 +88,7 @@ def download_specific_board(board_url, target_count=69):
     finally:
         driver.quit()
         print(f"\nİşlem tamamlandı! {len(final_list)} görsel Masaüstü'ndeki 'pin_pano' klasörüne kaydedildi.")
-
+#burdaki url değiştir
 if __name__ == "__main__":
-    target_url = "https://tr.pinterest.com/thelf_kv/boys-of-tommen-13/"
-    download_specific_board(target_url, target_count=69)
+    target_url = "https://tr.pinterest.com/thelf_kv/boys-of-tommen-6/"
+    download_specific_board(target_url, target_count=72)
